@@ -33,7 +33,8 @@ pnx.listen = function (eventName, callback = () => { }, priority = EventPriority
 function blcokIndex(b) { return [b.getLevel().getName(), b.getX(), b.getY(), b.getZ()].join(">") }
 //------------------------------------------------------------------------
 console.log(JUtils);
-let structureData = JSON.parse(JUtils.readFile("./plugins/@Multiblock/data.json"));
+let path = "./plugins/@pnx-js-Multiblock/data.json"
+let structureData = JSON.parse(JUtils.readFile(path));
 
 console.log(structureData);
 
@@ -192,6 +193,6 @@ export function close() {
 			console.log(structureData);
 		}
 	}
-	JUtils.writeFile("./plugins/@Multiblock/data.json", JSON.stringify(structureData));
+	JUtils.writeFile(path, JSON.stringify(structureData));
 	print("JS plugin close");
 }
