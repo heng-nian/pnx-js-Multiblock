@@ -1,0 +1,5 @@
+name: Multiblock
+main: Multiblock.js
+api: ["1.0.13"]
+version: "0.0.1"
+load: POSTWORLD
